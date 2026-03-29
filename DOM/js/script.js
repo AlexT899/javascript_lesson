@@ -16,9 +16,16 @@ const span = document.querySelector(".rollback .range-value");
 
 const allInput = document.getElementsByClassName("total-input");
 const firstInput = allInput[0];
+const firstInput = allInput[0];
+const secondInput = allInput[1];
+const thirdInput = allInput[2];
+const fourthInput = allInput[3];
+const fifthInput = allInput[4];
+
 for (let i = 0; i < allInput.length; i++) {
   console.log(allInput[i]);
 }
+
 let screen = document.querySelectorAll(".screen");
 
 console.log(title[0]);
