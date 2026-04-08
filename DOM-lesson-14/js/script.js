@@ -28,9 +28,9 @@ const elementsToDisable = checkbox.querySelectorAll(
 
 const cmsCheckbox = document.querySelector("#cms-open");
 const hiddenCmsVariant = document.querySelector(".hidden-cms-variants");
-const selectCms = hiddenCmsVariant.querySelector("select");
-const inputCmsOther = hiddenCmsVariant.querySelector(".main-controls__input");
-const inputCmsOtherInput = hiddenCmsVariant.querySelector(
+const select = hiddenCmsVariant.querySelector("select");
+const inputOther = hiddenCmsVariant.querySelector(".main-controls__input");
+const otherInput = hiddenCmsVariant.querySelector(
   ".main-controls__input input"
 );
 const appData = {
@@ -54,14 +54,14 @@ const appData = {
     screenQty.addEventListener("input", this.validateForm.bind(this));
     inputRange.addEventListener("input", this.rangeForm.bind(this));
     cmsCheckbox.addEventListener("change", this.toggleCms.bind(this));
-    selectCms.addEventListener("change", this.openHiddenInput.bind(this));
+    select.addEventListener("change", this.openHiddenInput.bind(this));
   },
 
   openHiddenInput: function () {
-    if (selectCms.value === "other") {
-      inputCmsOther.style.display = "block";
+    if (select.value === "other") {
+      inputOther.style.display = "block";
     } else {
-      inputCmsOther.style.display = "none";
+      inputOther.style.display = "none";
     }
   },
   toggleCms: function () {
